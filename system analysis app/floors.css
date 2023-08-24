@@ -1,0 +1,116 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+.floors-background-image{
+    max-height:100%;
+    max-width:100%;
+    object-fit:cover;
+}
+
+.floors-background-container{
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.screen-container{
+    height:80%;
+    width:90%;
+    border:2px solid white;
+    background-color:rgba(255,255, 255,0.3);
+    border-radius:10px;
+    display:flex;
+    flex-direction:row;
+    position:absolute;
+}
+
+.screen-container .row{
+    display:flex;
+    flex-direction:column;
+    width:50%;
+    position:relative;
+    padding:5px;
+    margin:0 10px;
+}
+
+.cctv-footage{
+    z-index:1;
+    position:absolute;
+    top:20px;
+}
+
+.floors-controller-container{
+    background-color:white;
+    display:flex;
+    flex-direction:column;
+    border-radius:10px;
+    position:absolute;
+    z-index:1;
+    top:400px;
+    padding:10px 0;
+}
+
+.floors-controller-container .controller-row{
+    display:flex;
+    flex-direction:row;
+    padding:20px 20px;
+    border-radius:10px;
+}
+
+.floors-controller-container .controller-row .left{
+    display:flex;
+    flex-direction:column;
+    width:50%;
+}
+
+.floors-controller-container .controller-row .right{
+    width:50%;
+    display:flex;
+    justify-content:end;
+}
+
+.room-image{
+    width:120px;
+    border-radius:8px;
+}
+
+.floors-controller-container .controller-row .left .left-row:nth-child(1){
+  color:#c8c8c8;
+  font-size:16px;
+}
+
+.floors-controller-container .controller-row .left .left-row:nth-child(2){
+    color:black;
+    font-size:18px;
+    margin:5px 0;
+    font-weight:bold;
+  }
+
+  .floors-controller-container .controller-row .left .left-row:nth-child(3){
+    color:#84d7d7 ;
+    font-size:16px;
+  }
+
+  .floors-controller-container .controller-row:hover{
+    background-color:#e5e4e2;
+    cursor: pointer;
+    transition:0.5s all;
+  }
+
+  .graph1, .graph2{
+    height:370px;
+    object-fit: contain;
+  }
+
+  .right-row2{
+    display:flex;
+    justify-content:space-around;
+    
+  }
+
+
+

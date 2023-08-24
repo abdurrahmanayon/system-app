@@ -1,0 +1,76 @@
+
+.footer{
+    text-align:center;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    padding:10px 0;
+    background-color:#0e2a47;
+}
+
+.footer-section{
+    font-size:22px;
+    color:#48ffd5;
+}
+
+.other-letters{
+    color:#48ffd5;
+}
+
+.icons{
+    list-style-type:none;
+    display:flex;
+    justify-content:center;
+    padding:0 10px 0 0;
+}
+
+.icons li{
+    display: inline;
+    margin:0 10px 0 10px;
+}
+
+.btn{
+    height:50px;
+    width:50px;
+    transition-property:background,transform;
+    transition-duration:0.4s,0.2s;
+    transition-timing-function: ease-in;
+    border:3px solid #f195b2;
+    border-radius:100px;
+    background-color:white;
+}
+
+.fa-facebook, .fa-instagram, .fa-twitter{
+    transition:0.8s all;
+}
+
+.fa-brands,.fa-facebook{
+    font-size:40px;
+    color:#48ffd5;
+}
+
+.fa-facebook:hover{
+   color:white;
+} 
+
+.fa-instagram:hover{
+   color:white;
+} 
+
+.fa-twitter:hover{
+    color:white;
+}
+
+.footer .logo{
+    font-size:40px;
+    font-weight:bold;
+    display:flex;
+    justify-content: center;
+}
+
+.footer span:nth-child(3){
+    margin:0 0 0 10px;
+}
+
+.footer .first-letter{
+    color:white;
+}

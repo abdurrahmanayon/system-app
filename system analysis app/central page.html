@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="central-page.css">
+
+    <link rel="stylesheet" href="nav.css">
+
+    <link href="/your-path-to-uicons/css/uicons-[your-style].css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+   <nav class="nav">
+      <div class="logo">
+         <span class="first-letter">S</span><span class="other-letters">ecure</span><span class="first-letter">H</span><span class="other-letters">ome+</span>
+     </div>
+      <ul class="ul1">
+         <li class="li1"><a href="central page.html" target="_self" class="active"><i class="fa-solid fa-house"></i>Home</a></li>
+         <li class="li1"><a href="configure-devices.html" target="_self" class="active"><i class="fa-solid fa-sliders"></i>Automation Settings</a></li>
+         <li class="li1"><a href="devices.html" target="_self" class="active"><i class="fa-solid fa-microchip"></i>Devices</a></li>
+         <li class="li1"><a href="profile.html" target="_self" class="active"><i class="fa-solid fa-user"></i>Profile</a></li>
+         <li class="li1"><a href="login.html" target="_self" class="active"><i class="fa-sharp fa-solid fa-right-from-bracket"></i>Logout</a></li>
+      </ul>
+     
+  </nav>
+
+    <div class="content">
+
+        <div class="content-left-screen">
+            <img class="left-screen-background-image" src="pexels-expect-best-323780.jpg" alt="">
+            <div class="icon1-container"><img class="icon1-image" src="cctv.png" alt=""></div> 
+            <div class="icon2-container"><img class="icon1-image" src="lock.png" alt=""></div> 
+            <div class="icon3-container"><img class="icon1-image" src="motion-sensor.png" alt=""></div> 
+            
+            <div class="door-lock-container">
+                 <div class="door-lock-background-container">
+                 <p class="title1">Front Door Lock</p>
+                 <p id="door-lock-status" class="lock-status">Unlocked</p>
+                 <label for="door-lock" class="switch">
+                    <input id="door-lock" type="checkbox">
+                    <div class="slider"></div>
+                 </label>
+                  
+                 <img class="background-image" src="pexels-jessica-lewis-creative-10880487.jpg" alt="">
+                </div> 
+            </div>
+
+             <div class="devices-container">
+                <p class="title">3 Devices</p>
+                <div class="rows">
+                     <div class="row">
+                        <img src="cctv (2).png" alt="" class="device-image">
+                        <p>Active <span>●</span></p>
+                        <p class="description">Location : Living Room</p>
+                     </div>
+                     <div class="row">
+                        <img src="cctv (2).png" alt="" class="device-image">
+                        <p>Active <span>●</span></p>
+                        <p class="description">Location : Bedroom Room 1</p>
+                     </div>
+                     <div class="row">
+                        <img src="motion-sensor (1).png" alt="" class="device-image">
+                        <p>Active <span>●</span></p>
+                        <p class="description">Location : Living Room</p>
+                     </div>
+                </div>
+             </div>
+
+             <div class="notification-container">
+                <p class="title">2 Notifications</p>
+                <div class="rows">
+                     <div class="row">
+                        <img src="danger.png" alt="" class="device-image">
+                        <p>Glass Break Detected <span>1:20 am</span></p>
+                        <p class="description">Location : Living Room</p>
+                     </div>
+                     <div class="row">
+                        <img src="alert.png" alt="" class="device-image">
+                        <p>Unusual Activity Detected <span>11:10 pm</span></p>
+                        <p class="description">Location : Living Room</p>
+                     </div>
+                </div>
+
+             </div>
+
+
+             <div class="btn-container">
+
+             <a href="floors.html"><button class="location-btn">First Floor</button></a>
+             <a href="floors.html"><button class="location-btn">Second Floor</button></a>
+             <a href="floors.html"><button class="location-btn">Garage</button></a>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+         $(document).ready(function() {
+           $("#door-lock").click(function() {
+            if($('#door-lock-status').text()==="Locked"){
+               $('#door-lock-status').text("Unlocked");
+            }
+
+            else{
+               $('#door-lock-status').text("Locked");
+            }
+           
+           });
+         });
+    </script>
+    
+</body>
+</html>

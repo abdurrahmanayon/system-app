@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+  
+
+    <link rel="stylesheet" href="configure-devices.css">
+
+    <link rel="stylesheet" href="nav.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+   <nav class="nav">
+      <div class="logo">
+         <span class="first-letter">S</span><span class="other-letters">ecure</span><span class="first-letter">H</span><span class="other-letters">ome+</span>
+     </div>
+      <ul class="ul1">
+         <li class="li1"><a href="central page.html" target="_self" class="active"><i class="fa-solid fa-house"></i>Home</a></li>
+         <li class="li1"><a href="configure-devices.html" target="_self" class="active"><i class="fa-solid fa-sliders"></i>Automation Settings</a></li>
+         <li class="li1"><a href="devices.html" target="_self" class="active"><i class="fa-solid fa-microchip"></i>Devices</a></li>
+         <li class="li1"><a href="profile.html" target="_self" class="active"><i class="fa-solid fa-user"></i>Profile</a></li>
+         <li class="li1"><a href="login.html" target="_self" class="active"><i class="fa-sharp fa-solid fa-right-from-bracket"></i>Logout</a></li>
+      </ul>
+     
+  </nav>
+
+    <div class="content">
+        <img src="house-isolated-field.jpg" alt="" class="content-background-image">
+        <div class="content-container">
+            <div class="options">
+                <button id="off" class="off">OFF</button>
+                <button id="home" class="home">HOME</button>
+                <button id="away" class="away">AWAY</button>
+            </div>
+            
+            <div class="devices-list">
+               <p class="device-name">Smart Lock : Front Door</p>
+               <button id="front-door" class="device-btn">OFF</button>
+            </div>
+            <div class="devices-list">
+                <p class="device-name">Smart Lock : Side Door</p>
+                <button id="side-door" class="device-btn">OFF</button>
+             </div>
+
+
+             <p class="title">Surveillance Cameras</p>
+             <div class="devices-list">
+                <p class="device-name">1st floor : Living room</p>
+                <button class="device-btn cam">OFF</button>
+             </div>
+             <div class="devices-list">
+                <p class="device-name">1st floor : Kitchen</p>
+                <button id="cam2" class="device-btn">OFF</button>
+             </div>
+
+             <p class="title">Motion Sensor</p>
+             <div class="devices-list">
+                <p class="device-name">1st floor : Hallway</p>
+                <button class="device-btn">OFF</button>
+             </div>
+             <div class="devices-list">
+                <p class="device-name">1st floor : Living room</p>
+                <button class="device-btn">OFF</button>
+             </div>
+
+             <p class="title">Sound Detector</p>
+             <div class="devices-list">
+                <p class="device-name">1st floor : Hallway</p>
+                <button class="device-btn">OFF</button>
+             </div>
+             <div class="devices-list">
+                <p class="device-name">1st floor : Living room</p>
+                <button class="device-btn">OFF</button>
+             </div>
+             
+              
+
+        </div>
+    </div>
+
+
+    <script>
+        $(document).ready(function() {
+          $("#front-door").click(function() {
+           if($('#front-door').text()==="ON"){
+              $('#front-door').text("OFF");
+              $("#front-door").css("background-color", "#51535f");
+           }
+
+           else{
+            $('#front-door').text("ON");
+            $("#front-door").css("background-color", "#66f6ca");
+           } 
+          });
+
+          $("#side-door").click(function() {
+           if($('#side-door').text()==="ON"){
+              $('#side-door').text("OFF");
+              $("#side-door").css("background-color", "#51535f");
+           }
+
+           else{
+            $('#side-door').text("ON");
+            $("#side-door").css("background-color", "#66f6ca");
+           } 
+          });
+
+          $(".cam").click(function() {
+           if($('.cam').text()==="ON"){
+              $('.cam').text("OFF");
+              $(".cam").css("background-color", "#51535f");
+           }
+
+           else{
+            $('.cam').text("ON");
+            $(".cam").css("background-color", "#66f6ca");
+           } 
+          });
+
+          $("#cam2").click(function() {
+           if($('#cam2').text()==="ON"){
+              $('#cam2').text("OFF");
+              $("#cam2").css("background-color", "#51535f");
+           }
+
+           else{
+            $('#cam2').text("ON");
+            $("#cam2").css("background-color", "#66f6ca");
+           } 
+          });
+
+          $("#away").click(function() {
+              $('#off').css("background-color", "#87edd0");
+              $('#home').css("background-color", "#87edd0");
+              $('#away').css("background-color", "#3bff16");
+          });
+
+          $("#home").click(function() {
+              $('#off').css("background-color", "#87edd0");
+              $('#home').css("background-color", "#3bff16");
+              $('#away').css("background-color", "#87edd0");
+          });
+
+          $("#off").click(function() {
+              $('#home').css("background-color", "#87edd0");
+              $('#off').css("background-color", "#3bff16");
+              $('#away').css("background-color", "#87edd0");
+          });
+
+          
+
+
+        });
+   </script>
+    
+
+    
+</body>
+</html>

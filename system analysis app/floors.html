@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="floors.css">
+
+    <link href="/your-path-to-uicons/css/uicons-[your-style].css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+
+    
+</head>
+<body>
+
+    <nav class="nav">
+        <div class="logo">
+            <span class="first-letter">S</span><span class="other-letters">ecure</span><span class="first-letter">H</span><span class="other-letters">ome+</span>
+        </div>
+        <ul class="ul1">
+           <li class="li1"><a href="central page.html" target="_self" class="active"><i class="fa-solid fa-house"></i>Home</a></li>
+           <li class="li1"><a href="configure-devices.html" target="_self" class="active"><i class="fa-solid fa-sliders"></i>Automation Settings</a></li>
+           <li class="li1"><a href="devices.html" target="_self" class="active"><i class="fa-solid fa-microchip"></i>Devices</a></li>
+           <li class="li1"><a href="profile.html" target="_self" class="active"><i class="fa-solid fa-user"></i>Profile</a></li>
+           <li class="li1"><a href="login.html" target="_self" class="active"><i class="fa-sharp fa-solid fa-right-from-bracket"></i>Logout</a></li>
+        </ul>
+       
+    </nav>
+    
+    <div class="content">
+        <div class="floors-background-container">
+            <img src="pexels-curtis-adams-3555618.jpg" alt="" class="floors-background-image">
+            <div class="screen-container">
+                <div class="row">
+                        <video autoplay loop src="front door video.mp4" class="cctv-footage"></video>
+                        <div class="floors-controller-container">
+                            <div id="row1" class="controller-row">
+                                <div class="left">
+                                    <div class="left-row">May 17, 2023</div>
+                                    <div class="left-row">1st floor : Living room</div>
+                                    <div class="left-row">15:51:50</div>
+                                </div>
+                                <div class="right">
+                                    <img src="living-room-pic.png" alt="" class="room-image">
+                                </div>
+                            </div>
+                            <div id="row2" class="controller-row">
+                                <div class="left">
+                                    <div class="left-row">May 17, 2023</div>
+                                    <div class="left-row">2nd floor : Bedroom</div>
+                                    <div class="left-row">15:51:50</div>
+                                </div>
+                                <div class="right">
+                                    <img src="bedroom.png" alt="" class="room-image">
+                                </div>
+                            </div>
+                            <div id="row3" class="controller-row">
+                                <div class="left">
+                                    <div class="left-row">May 17, 2023</div>
+                                    <div class="left-row">Font door</div>
+                                    <div class="left-row">15:51:50</div>
+                                </div>
+                                <div class="right">
+                                    <img src="font door.png" alt="" class="room-image">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div class="row right-row2">
+                    <video controls  loop src="motion graph.mp4" class="graph1"></video>
+                    <video controls  loop src="sound.mp4" class="graph2"></video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+         $(document).ready(function() {
+
+        // Add an onclick event to the div
+        $('#row2').on('click', function() {
+            var newSource = "bedroom video.mp4"; // Replace this with the new video URL
+
+            // Change the src attribute of the video tag
+            $('.cctv-footage').attr('src', newSource);
+
+            // Load the updated video source
+            $('.cctv-footage')[0].load();
+
+            $(this).css('background-color', '#e5e4e2');
+            $('#row1').css('background-color', 'white');
+            $('#row3').css('background-color', 'white');
+
+            // Optionally, you can also play the video automatically after changing the source
+            // Uncomment the following line to do that:
+            // $('#myVideo')[0].play();
+        });
+
+        $('#row1').on('click', function() {
+            var newSource = "living-room.mp4"; // Replace this with the new video URL
+
+            // Change the src attribute of the video tag
+            $('.cctv-footage').attr('src', newSource);
+
+            // Load the updated video source
+            $('.cctv-footage')[0].load();
+
+            $(this).css('background-color', '#e5e4e2');
+            $('#row2').css('background-color', 'white');
+            $('#row3').css('background-color', 'white');
+
+            // Optionally, you can also play the video automatically after changing the source
+            // Uncomment the following line to do that:
+            // $('#myVideo')[0].play();
+        });
+
+        $('#row3').on('click', function() {
+            var newSource = "front door video.mp4"; // Replace this with the new video URL
+
+            // Change the src attribute of the video tag
+            $('.cctv-footage').attr('src', newSource);
+
+            // Load the updated video source
+            $('.cctv-footage')[0].load();
+
+            $(this).css('background-color', '#e5e4e2');
+            $('#row1').css('background-color', 'white');
+            $('#row2').css('background-color', 'white');
+
+            // Optionally, you can also play the video automatically after changing the source
+            // Uncomment the following line to do that:
+            // $('#myVideo')[0].play();
+        });
+    });
+    </script>
+
+    
+</body>
+</html>
